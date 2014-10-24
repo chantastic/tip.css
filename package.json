@@ -1,0 +1,26 @@
+{
+  "name": "tip.css",
+  "version": "0.0.1",
+  "description": "CSS tooltip. Theme-able and the API doesn't suck",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chantastic/tip.css.git"
+  },
+  "keywords": [
+    "css",
+    "tooltip"
+  ],
+  "author": "Michael Chan (chantastic)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chantastic/tip.css/issues"
+  },
+  "homepage": "https://github.com/chantastic/tip.css",
+  "devDependencies": {
+    "gulp-sass": "^1.2.0"
+  }
+}
