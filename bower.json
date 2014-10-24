@@ -1,0 +1,22 @@
+{
+  "name": "tip.css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chantastic/tip.css",
+  "authors": [
+    "Michael Chan <mijoch@gmail.com>"
+  ],
+  "description": "CSS tooltip. Theme-able and the API doesn't suck",
+  "main": "tip.css",
+  "keywords": [
+    "css",
+    "tooltip"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
