@@ -16,25 +16,25 @@
 
 [has-tip]::before, [has-tip]::after {
   position: absolute;
-  z-index: 100000;
-  visibility: hidden; }
+  visibility: hidden;
+  z-index: 100000; }
 
 [has-tip]:hover::before, [has-tip]:hover::after {
   visibility: visible; }
 
 [has-tip]::before {
   border: 5px solid transparent;
-  content: "";
   width: 0;
-  height: 0; }
+  height: 0;
+  content: ""; }
 
 [has-tip]::after {
-  content: attr(tip-content);
-  white-space: nowrap;
-  background-color: black;
   padding: 5px 8px;
+  font-size: 13px;
+  content: attr(tip-content);
+  background-color: black;
   color: white;
-  font-size: 13px; }
+  white-space: nowrap; }
 
 [has-tip]:not([has-tip~="top"]):not([has-tip~="right"]):not([has-tip~="bottom"]):not([has-tip~="left"])::before {
   top: auto;

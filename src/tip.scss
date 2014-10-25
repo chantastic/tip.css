@@ -5,8 +5,8 @@
 [has-tip]:not([tip-content]):not([title]) { &:before, &:after { visibility: hidden } }
 [has-tip][title=""]:not([tip-content])    { &:before, &:after { visibility: hidden } }
 
-[has-tip]:not([tip-content])::after           { content: attr(title) }
-[has-tip][tip-content=""]::after              { content: attr(title) }
+[has-tip]:not([tip-content])::after { content: attr(title) }
+[has-tip][tip-content=""]::after    { content: attr(title) }
 
 // tip
 
@@ -18,9 +18,9 @@
 // TODO: allow opocity, for transitions
 [has-tip]::before,
 [has-tip]::after {
-  position: absolute;
-  z-index: 100000;
+  position:   absolute;
   visibility: hidden;
+  z-index:    100000;
 }
 
 [has-tip]:hover::before,
@@ -29,20 +29,20 @@
 }
 
 [has-tip]::before {
-  border: 5px solid transparent;
+  border:  5px solid transparent;
+  width:   0;
+  height:  0;
   content: "";
-  width: 0;
-  height: 0;
 }
 
 // TODO: extract theme
 [has-tip]::after {
-  content:          attr(tip-content);
-  white-space:      nowrap;
-  background-color: black;
   padding:          5px 8px;
-  color:            white;
   font-size:        13px;
+  content:          attr(tip-content);
+  background-color: black;
+  color:            white;
+  white-space:      nowrap;
 }
 
 // direction
