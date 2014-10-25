@@ -46,7 +46,8 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width: auto;
+  max-width:600px;
   margin:0 auto;
 }
 
@@ -95,18 +96,12 @@ img {
   max-width:100%;
 }
 
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-}
-
 header ul {
   list-style:none;
   height:40px;
-  
+
   padding:0;
-  
+
   background: #eee;
   background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
@@ -114,7 +109,7 @@ header ul {
   background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
   background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
+
   border-radius:5px;
   border:1px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
@@ -160,8 +155,6 @@ header ul a strong {
 }
 
 section {
-  width:500px;
-  float:right;
   padding-bottom:50px;
 }
 
@@ -177,40 +170,27 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
   bottom:50px;
 }
 
 @media print, screen and (max-width: 960px) {
-  
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-  
   header, section, footer {
-    float:none;
-    position:static;
     width:auto;
   }
-  
+
   header {
     padding-right:320px;
   }
-  
+
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
   }
-  
+
   header a small {
     display:inline;
   }
-  
+
   header ul {
     position:absolute;
     right:50px;
@@ -222,15 +202,15 @@ footer {
   body {
     word-wrap:break-word;
   }
-  
+
   header {
     padding:0;
   }
-  
+
   header ul, header p.view {
     position:static;
   }
-  
+
   pre, code {
     word-wrap:normal;
   }
@@ -240,7 +220,7 @@ footer {
   body {
     padding:15px;
   }
-  
+
   header ul {
     display:none;
   }

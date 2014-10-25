@@ -1,35 +1,51 @@
+---
+title: Tip.css by chantastic
+---
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Tip.css by chantastic</title>
+    <title>{{title}}</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/tip.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <style>[has-tip] { border-bottom: 1px dotted }</style>
   </head>
 
   <body>
-    <div class="wrapper">
+    <main class="wrapper">
       <header>
         <h1 style="margin-bottom: 30px">Tip.css</h1>
-        <h3 class="view">
-          <a
-           href="https://github.com/chantastic/tip.css"
-           style="border: 1px solid; padding: 10px; border-radius: 3px">
-            View on GitHub
-          </a>
-        </h3>
       </header>
 
       <section>
-        <p></p>
+        <p style="text-align: center; font-size: 16px">
+          <span tip-content="this is a tip" has-tip>Hover here</span>
+        </p>
+
+        <div style="margin-top: 50px; text-align: center">
+          {% highlight html %}
+          <span tip-content="this is a tip" has-tip>Hover here</span>
+          {% endhighlight %}
+        </div>
       </section>
-    </div>
+
+      <footer style="text-align: center">
+        <h4 class="view">
+          <a
+           href="https://github.com/chantastic/tip.css"
+           style="border: 1px solid; padding: 8px; border-radius: 3px">
+            View on GitHub
+          </a>
+        </h4>
+      </footer>
+    </main>
 
     <script src="javascripts/scale.fix.js"></script>
     <script type="text/javascript">
