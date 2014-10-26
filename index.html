@@ -9,13 +9,13 @@ title: Tip.css by chantastic
     <title>{{title}}</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/tip.css">
+    <link rel="stylesheet" href="stylesheets/tip.0.1.0.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <style>[has-tip] { border-bottom: 1px dotted }</style>
+    <style>[data-has-tip] { border-bottom: 1px dotted }</style>
   </head>
 
   <body>
@@ -26,12 +26,12 @@ title: Tip.css by chantastic
 
       <section>
         <p style="text-align: center; font-size: 16px">
-          <span tip-content="this is a tip" has-tip>Hover here</span>
+          <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
         </p>
 
         <div style="margin-top: 50px; text-align: center">
           {% highlight html %}
-          <span tip-content="this is a tip" has-tip>Hover here</span>
+          <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
           {% endhighlight %}
         </div>
       </section>
