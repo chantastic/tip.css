@@ -1,6 +1,6 @@
 {
   "name": "tip.css",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CSS tooltip. Theme-able and the API doesn't suck",
   "main": "gulpfile.js",
   "scripts": {
