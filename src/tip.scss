@@ -18,9 +18,10 @@
 // TODO: allow opocity, for transitions
 [has-tip]::before,
 [has-tip]::after {
-  position:   absolute;
-  visibility: hidden;
-  z-index:    100000;
+  position:       absolute;
+  visibility:     hidden;
+  z-index:        100000;
+  pointer-events: none;
 }
 
 [has-tip]:hover::before,

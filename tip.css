@@ -17,7 +17,8 @@
 [has-tip]::before, [has-tip]::after {
   position: absolute;
   visibility: hidden;
-  z-index: 100000; }
+  z-index: 100000;
+  pointer-events: none; }
 
 [has-tip]:hover::before, [has-tip]:hover::after {
   visibility: visible; }
