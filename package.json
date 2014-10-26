@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/chantastic/tip.css",
   "devDependencies": {
+    "gulp-minify-css": "^0.3.11",
     "gulp-sass": "^1.2.0"
   }
 }
