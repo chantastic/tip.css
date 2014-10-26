@@ -1,46 +1,49 @@
 @import "_mixins/translate";
 
+// assignments
+
+$attr:         "data-has-tip"     !default;
+$content-attr: "data-tip-content" !default;
+
 // content
 
-[has-tip]:not([tip-content]):not([title]) { &:before, &:after { visibility: hidden } }
-[has-tip][title=""]:not([tip-content])    { &:before, &:after { visibility: hidden } }
+[#{$attr}]:not([#{$content-attr}]):not([title]) { &:before, &:after { visibility: hidden } }
+[#{$attr}][title=""]:not([#{$content-attr}])    { &:before, &:after { visibility: hidden } }
 
-[has-tip]:not([tip-content])::after { content: attr(title) }
-[has-tip][tip-content=""]::after    { content: attr(title) }
+[#{$attr}]:not([#{$content-attr}])::after { content: attr(title) }
+[#{$attr}][#{$content-attr}=""]::after    { content: attr(title) }
 
 // tip
 
-[has-tip] {
+[#{$attr}] {
   position: relative;
   cursor:   default;
 }
 
-// TODO: allow opocity, for transitions
-[has-tip]::before,
-[has-tip]::after {
+[#{$attr}]::before,
+[#{$attr}]::after {
   position:       absolute;
   visibility:     hidden;
   z-index:        100000;
   pointer-events: none;
 }
 
-[has-tip]:hover::before,
-[has-tip]:hover::after {
+[#{$attr}]:hover::before,
+[#{$attr}]:hover::after {
   visibility: visible;
 }
 
-[has-tip]::before {
+[#{$attr}]::before {
   border:  5px solid transparent;
   width:   0;
   height:  0;
   content: "";
 }
 
-// TODO: extract theme
-[has-tip]::after {
+[#{$attr}]::after {
   padding:          5px 8px;
   font-size:        13px;
-  content:          attr(tip-content);
+  content:          attr(#{$content-attr});
   background-color: black;
   color:            white;
   white-space:      nowrap;
@@ -48,7 +51,7 @@
 
 // direction
 
-[has-tip]:not([has-tip~="top"]):not([has-tip~="right"]):not([has-tip~="bottom"]):not([has-tip~="left"]) {
+[#{$attr}]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"]) {
   &::before { top: auto; right: 50%; bottom: -5px; left: auto }
   &::after  { top: 100%; right: 50%; bottom: auto; left: auto }
 
@@ -59,7 +62,7 @@
   &::after  { @include translate(50%, 0) }
 }
 
-[has-tip~="top"] {
+[#{$attr}~="top"] {
   &::before { top: -5px; right: 50%; bottom: auto; left: auto }
   &::after  { top: auto; right: 50%; bottom: 100%; left: auto }
 
@@ -70,7 +73,7 @@
   &::after  { @include translate(50%, 0) }
 }
 
-[has-tip~="right"] {
+[#{$attr}~="right"] {
   &::before { top: auto; right: -5px; bottom: 50%; left: auto }
   &::after  { top: auto; right: auto; bottom: 50%; left: 100% }
 
@@ -81,7 +84,7 @@
   &::after  { @include translate(0, 50%) }
 }
 
-[has-tip~="bottom"] {
+[#{$attr}~="bottom"] {
   &::before { top: auto; right: 50%; bottom: -5px; left: auto }
   &::after  { top: 100%; right: 50%; bottom: auto; left: auto }
 
@@ -92,7 +95,7 @@
   &::after  { @include translate(50%, 0) }
 }
 
-[has-tip~="left"] {
+[#{$attr}~="left"] {
   &::before { top: auto; right: auto; bottom: 50%; left: -5px }
   &::after  { top: auto; right: 100%; bottom: 50%; left: auto }
 
@@ -105,22 +108,22 @@
 
 // anchor
 
-[has-tip~="anchor-top"]    { &::before { bottom: 80% } }
-[has-tip~="anchor-right"]  { &::before { right:  20% } }
-[has-tip~="anchor-bottom"] { &::before { bottom: 20% } }
-[has-tip~="anchor-left"]   { &::before { right:  80% } }
+[#{$attr}~="anchor-top"]    { &::before { bottom: 80% } }
+[#{$attr}~="anchor-right"]  { &::before { right:  20% } }
+[#{$attr}~="anchor-bottom"] { &::before { bottom: 20% } }
+[#{$attr}~="anchor-left"]   { &::before { right:  80% } }
 
 // flow
 
-[has-tip~="flow-up"]    { &::after { bottom: 20% } }
-[has-tip~="flow-down"]  { &::after { bottom: 80% } }
+[#{$attr}~="flow-up"]    { &::after { bottom: 20% } }
+[#{$attr}~="flow-down"]  { &::after { bottom: 80% } }
 
-[has-tip~="flow-right"] { &::after { @include translate(80%, 0) } }
-[has-tip~="flow-left"]  { &::after { @include translate(20%, 0) } }
+[#{$attr}~="flow-right"] { &::after { @include translate(80%, 0) } }
+[#{$attr}~="flow-left"]  { &::after { @include translate(20%, 0) } }
 
 // multiline
 
-[has-tip~="multiline"]::after {
+[#{$attr}~="multiline"]::after {
   width: 200px;
   white-space: normal;
 }

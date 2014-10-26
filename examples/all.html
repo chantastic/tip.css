@@ -3,17 +3,17 @@
   <link rel="stylesheet" type="text/css" href="../tip.css" />
   <style>
     /* demo styles */
-    p         { margin-bottom: 30px }
-    [has-tip] { background: blue }
+    p              { margin-bottom: 30px }
+    [data-has-tip] { background: blue }
   </style>
 <head>
 </head>
 <body class="tip-theme-default">
-  <p>The quick brown <span has-tip> fox jumps </span>over the lazy dog.</p>
-  <p>The quick brown <span title="" has-tip> fox jumps </span>over the lazy dog.</p>
-  <p>The quick brown <span title="a title" has-tip> fox jumps </span>over the lazy dog.</p>
-  <p>The quick brown <span tip-content="" title="a title" has-tip> fox jumps </span>over the lazy dog.</p>
-  <p>The quick brown <span tip-content="a content" title="" has-tip> fox jumps </span>over the lazy dog.</p>
+  <p>The quick brown <span data-has-tip> fox jumps </span>over the lazy dog.</p>
+  <p>The quick brown <span title="" data-has-tip> fox jumps </span>over the lazy dog.</p>
+  <p>The quick brown <span title="a title" data-has-tip> fox jumps </span>over the lazy dog.</p>
+  <p>The quick brown <span data-tip-content="" title="a title" data-has-tip> fox jumps </span>over the lazy dog.</p>
+  <p>The quick brown <span data-tip-content="a content" title="" data-has-tip> fox jumps </span>over the lazy dog.</p>
 
   <!-- top -->
   <p>
@@ -22,40 +22,40 @@
       rel="something"
       aria-has-popup="true"
       titile="blah"
-      tip-content="top"
-      has-tip=    "top"> fox jumps </span>
+      data-tip-content="top"
+      data-has-tip=    "top"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="top flow-right"
-      has-tip=    "top flow-right"> fox jumps </span>
+      data-tip-content="top flow-right"
+      data-has-tip=    "top flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="top flow-left"
-      has-tip=    "top flow-left"> fox jumps </span>
+      data-tip-content="top flow-left"
+      data-has-tip=    "top flow-left"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="top anchor-right"
-      has-tip=    "top anchor-right"> fox jumps </span>
+      data-tip-content="top anchor-right"
+      data-has-tip=    "top anchor-right"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="top anchor-left"
-      has-tip=    "top anchor-left"> fox jumps </span>
+      data-tip-content="top anchor-left"
+      data-has-tip=    "top anchor-left"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -63,8 +63,8 @@
   <p>
     The quick brown
     <span
-      tip-content="right"
-      has-tip=    "right"> fox jumps </span>
+      data-tip-content="right"
+      data-has-tip=    "right"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -72,40 +72,40 @@
   <p>
     The quick brown
     <span
-      tip-content="bottom"
-      has-tip=    "bottom"> fox jumps </span>
+      data-tip-content="bottom"
+      data-has-tip=    "bottom"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="bottom flow-right"
-      has-tip=    "bottom flow-right"> fox jumps </span>
+      data-tip-content="bottom flow-right"
+      data-has-tip=    "bottom flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="bottom flow-left"
-      has-tip=    "bottom flow-left"> fox jumps </span>
+      data-tip-content="bottom flow-left"
+      data-has-tip=    "bottom flow-left"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="bottom anchor-right"
-      has-tip=    "bottom anchor-right"> fox jumps </span>
+      data-tip-content="bottom anchor-right"
+      data-has-tip=    "bottom anchor-right"> fox jumps </span>
     over the lazy dog.
   </p>
 
   <p>
     The quick brown
     <span
-      tip-content="bottom anchor-left"
-      has-tip=    "bottom anchor-left"> fox jumps </span>
+      data-tip-content="bottom anchor-left"
+      data-has-tip=    "bottom anchor-left"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -113,8 +113,8 @@
   <p>
     The quick brown
     <span
-      tip-content="left"
-      has-tip=    "left"> fox jumps </span>
+      data-tip-content="left"
+      data-has-tip=    "left"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -122,29 +122,29 @@
   <p>
     The quick brown
     <span
-      tip-content="top multiline. multiline allows you to split a super long long."
-      has-tip=    "top multiline"> fox jumps </span>
+      data-tip-content="top multiline. multiline allows you to split a super long long."
+      data-has-tip=    "top multiline"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="right multiline. multiline allows you to split a super long long."
-      has-tip=    "right multiline"> fox jumps </span>
+      data-tip-content="right multiline. multiline allows you to split a super long long."
+      data-has-tip=    "right multiline"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="bottom multiline. multiline allows you to split a super long long."
-      has-tip=    "bottom multiline"> fox jumps </span>
+      data-tip-content="bottom multiline. multiline allows you to split a super long long."
+      data-has-tip=    "bottom multiline"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="left multiline. multiline allows you to split a super long long."
-      has-tip=    "left multiline"> fox jumps </span>
+      data-tip-content="left multiline. multiline allows you to split a super long long."
+      data-has-tip=    "left multiline"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -152,57 +152,57 @@
   <p>
     The quick brown
     <span
-      tip-content="top multiline flow-right. multiline allows you to split a super long long."
-      has-tip=    "top multiline flow-right"> fox jumps </span>
+      data-tip-content="top multiline flow-right. multiline allows you to split a super long long."
+      data-has-tip=    "top multiline flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="top multiline flow-left. multiline allows you to split a super long long."
-      has-tip=    "top multiline flow-left"> fox jumps </span>
+      data-tip-content="top multiline flow-left. multiline allows you to split a super long long."
+      data-has-tip=    "top multiline flow-left"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="right multiline flow-up. multiline allows you to split a super long long."
-      has-tip=    "right multiline flow-up"> fox jumps </span>
+      data-tip-content="right multiline flow-up. multiline allows you to split a super long long."
+      data-has-tip=    "right multiline flow-up"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="right multiline flow-down. multiline allows you to split a super long long."
-      has-tip=    "right multiline flow-down"> fox jumps </span>
+      data-tip-content="right multiline flow-down. multiline allows you to split a super long long."
+      data-has-tip=    "right multiline flow-down"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="bottom multiline flow-right. multiline allows you to split a super long long."
-      has-tip=    "bottom multiline flow-right"> fox jumps </span>
+      data-tip-content="bottom multiline flow-right. multiline allows you to split a super long long."
+      data-has-tip=    "bottom multiline flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="bottom multiline flow-left. multiline allows you to split a super long long."
-      has-tip=    "bottom multiline flow-left"> fox jumps </span>
+      data-tip-content="bottom multiline flow-left. multiline allows you to split a super long long."
+      data-has-tip=    "bottom multiline flow-left"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="left multiline flow-up. multiline allows you to split a super long long."
-      has-tip=    "left multiline flow-up"> fox jumps </span>
+      data-tip-content="left multiline flow-up. multiline allows you to split a super long long."
+      data-has-tip=    "left multiline flow-up"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="left multiline flow-down. multiline allows you to split a super long long."
-      has-tip=    "left multiline flow-down"> fox jumps </span>
+      data-tip-content="left multiline flow-down. multiline allows you to split a super long long."
+      data-has-tip=    "left multiline flow-down"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -210,57 +210,57 @@
   <p>
     The quick brown
     <span
-      tip-content="top multiline anchor-right. multiline allows you to split a super long long."
-      has-tip=    "top multiline anchor-right"> fox jumps </span>
+      data-tip-content="top multiline anchor-right. multiline allows you to split a super long long."
+      data-has-tip=    "top multiline anchor-right"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="top multiline anchor-left. multiline allows you to split a super long long."
-      has-tip=    "top multiline anchor-left"> fox jumps </span>
+      data-tip-content="top multiline anchor-left. multiline allows you to split a super long long."
+      data-has-tip=    "top multiline anchor-left"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="right multiline anchor-top. multiline allows you to split a super long long. multiline allows you to split a super long long."
-      has-tip=    "right multiline anchor-top"> fox jumps </span>
+      data-tip-content="right multiline anchor-top. multiline allows you to split a super long long. multiline allows you to split a super long long."
+      data-has-tip=    "right multiline anchor-top"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="right multiline anchor-bottom. multiline allows you to split a super long long. multiline allows you to split a super long long."
-      has-tip=    "right multiline anchor-bottom"> fox jumps </span>
+      data-tip-content="right multiline anchor-bottom. multiline allows you to split a super long long. multiline allows you to split a super long long."
+      data-has-tip=    "right multiline anchor-bottom"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="bottom multiline anchor-right. multiline allows you to split a super long long."
-      has-tip=    "bottom multiline anchor-right"> fox jumps </span>
+      data-tip-content="bottom multiline anchor-right. multiline allows you to split a super long long."
+      data-has-tip=    "bottom multiline anchor-right"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="bottom multiline anchor-left. multiline allows you to split a super long long."
-      has-tip=    "bottom multiline anchor-left"> fox jumps </span>
+      data-tip-content="bottom multiline anchor-left. multiline allows you to split a super long long."
+      data-has-tip=    "bottom multiline anchor-left"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="left multiline anchor-top. multiline allows you to split a super long long. multiline allows you to split a super long long."
-      has-tip=    "left multiline anchor-top"> fox jumps </span>
+      data-tip-content="left multiline anchor-top. multiline allows you to split a super long long. multiline allows you to split a super long long."
+      data-has-tip=    "left multiline anchor-top"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="left multiline anchor-bottom. multiline allows you to split a super long long. multiline allows you to split a super long long."
-      has-tip=    "left multiline anchor-bottom"> fox jumps </span>
+      data-tip-content="left multiline anchor-bottom. multiline allows you to split a super long long. multiline allows you to split a super long long."
+      data-has-tip=    "left multiline anchor-bottom"> fox jumps </span>
     over the lazy dog.
   </p>
 
@@ -269,22 +269,22 @@
   <p>
     The quick brown
     <span
-      tip-content="top anchor-right flow-right"
-      has-tip=    "top flow-right"> fox jumps </span>
+      data-tip-content="top anchor-right flow-right"
+      data-has-tip=    "top flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="top anchor-right flow-right. multiline allows you to split a super long long."
-      has-tip=    "top anchor-right flow-right"> fox jumps </span>
+      data-tip-content="top anchor-right flow-right. multiline allows you to split a super long long."
+      data-has-tip=    "top anchor-right flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
   <p>
     The quick brown
     <span
-      tip-content="top multiline anchor-right flow-right. multiline allows you to split a super long long."
-      has-tip=    "top multiline anchor-right flow-right"> fox jumps </span>
+      data-tip-content="top multiline anchor-right flow-right. multiline allows you to split a super long long."
+      data-has-tip=    "top multiline anchor-right flow-right"> fox jumps </span>
     over the lazy dog.
   </p>
 </body>
