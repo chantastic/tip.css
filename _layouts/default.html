@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/styles.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/tip.0.1.0.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+      [data-has-tip] { border-bottom: 1px dotted }
+      .use-table [data-has-tip]::before       { visibility: visible }
+      .use-table [data-has-tip]::after        { visibility: visible }
+      .use-table [data-has-tip]:hover::before { visibility: hidden }
+      .use-table [data-has-tip]:hover::after  { visibility: hidden }
+      .use-table tr { height: 100px }
+    </style>
+  </head>
+
+  <body>
+
+    <main class="wrapper">
+
+      <header>
+        <h1 style="margin-bottom: 30px">Tip.css</h1>
+      </header>
+
+      {{ content }}
+
+      <footer style="text-align: center">
+        <h4 class="f4">
+          <a href="{{site.baseurl}}/">Home</a>
+        </h4>
+
+        <h4 class="f4" style="margin-left: 30px">
+          <a href="{{site.baseurl}}/use">Use</a>
+        </h4>
+
+        <h4 class="f4 view" style="margin-left: 30px">
+          <a
+           href="{{site.baseurl}}"
+           style="border: 1px solid; padding: 8px; border-radius: 3px">
+            View on GitHub
+          </a>
+        </h4>
+      </footer>
+
+    </main>
+
+    <script src="{{site.baseurl}}/javascripts/scale.fix.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-46843279-2");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  </body>
+</html>

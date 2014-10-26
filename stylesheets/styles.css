@@ -7,27 +7,36 @@ body {
   font-weight:300;
 }
 
+.f1, .f2, .f3, .f4, .f5, .f6,
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
+}
+
+.f1, .f2, .f3, .f4, .f5, .f6 {
+  display: inline-block;
 }
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
 }
 
+.f1, .f2, .f3,
 h1, h2, h3 {
   line-height:1.1;
 }
 
+.f1,
 h1 {
   font-size:28px;
 }
 
+.f2,
 h2 {
   color:#393939;
 }
 
+.f3, .f4, .f5, .f6,
 h3, h4, h5, h6 {
   color:#494949;
 }
@@ -79,8 +88,7 @@ table {
 
 th, td {
   text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
+  border-bottom:1px solid #eee;
 }
 
 dt {
@@ -232,4 +240,8 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+.mute {
+  color: #aaa;
 }

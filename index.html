@@ -1,62 +1,16 @@
 ---
-title: Tip.css by chantastic
+layout: default
+title: Tip.css
 ---
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{title}}</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/tip.0.1.0.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <style>[data-has-tip] { border-bottom: 1px dotted }</style>
-  </head>
+<section>
+  <p style="text-align: center; font-size: 16px">
+    <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
+  </p>
 
-  <body>
-    <main class="wrapper">
-      <header>
-        <h1 style="margin-bottom: 30px">Tip.css</h1>
-      </header>
-
-      <section>
-        <p style="text-align: center; font-size: 16px">
-          <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
-        </p>
-
-        <div style="margin-top: 50px; text-align: center">
-          {% highlight html %}
-          <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
-          {% endhighlight %}
-        </div>
-      </section>
-
-      <footer style="text-align: center">
-        <h4 class="view">
-          <a
-           href="https://github.com/chantastic/tip.css"
-           style="border: 1px solid; padding: 8px; border-radius: 3px">
-            View on GitHub
-          </a>
-        </h4>
-      </footer>
-    </main>
-
-    <script src="javascripts/scale.fix.js"></script>
-    <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-      try {
-        var pageTracker = _gat._getTracker("UA-46843279-2");
-      pageTracker._trackPageview();
-      } catch(err) {}
-    </script>
-  </body>
-</html>
+  <div style="margin-top: 50px; text-align: center">
+    {% highlight html %}
+    <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
+    {% endhighlight %}
+  </div>
+</section>
