@@ -1,3 +1,4 @@
+/*! tip.css v0.2.0 | MIT License | http://git.io/tip.css*/
 [data-has-tip]:not([data-tip-content]):not([title]):before, [data-has-tip]:not([data-tip-content]):not([title]):after {
   visibility: hidden; }
 
