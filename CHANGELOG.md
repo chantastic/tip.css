@@ -1,4 +1,4 @@
-### 0.2.0
+### 0.2.0 : disoriented-specificity [2014.10.26]
 
 * [bugfix] reverse flow-up, flow-down
 * [bugfix] refactor over-specified default case
