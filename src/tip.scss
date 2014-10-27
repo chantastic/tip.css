@@ -34,7 +34,7 @@ $content-attr: "data-tip-content" !default;
 }
 
 [#{$attr}]::before {
-  border:  5px solid transparent;
+  border:  5px solid;
   width:   0;
   height:  0;
   content: "";
@@ -49,13 +49,13 @@ $content-attr: "data-tip-content" !default;
   white-space:      nowrap;
 }
 
-// direction
+// position
 
-[#{$attr}]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"]) {
+[#{$attr}] {
   &::before { top: auto; right: 50%; bottom: -5px; left: auto }
   &::after  { top: 100%; right: 50%; bottom: auto; left: auto }
 
-  &::before { border-bottom-color: black }
+  &::before { border-color: transparent; border-bottom-color: black }
   &::after  { margin-top: 5px }
 
   &::before { @include translate(50%, 0) }
@@ -66,7 +66,7 @@ $content-attr: "data-tip-content" !default;
   &::before { top: -5px; right: 50%; bottom: auto; left: auto }
   &::after  { top: auto; right: 50%; bottom: 100%; left: auto }
 
-  &::before { border-top-color: black }
+  &::before { border-color: transparent; border-top-color: black }
   &::after  { margin-bottom: 5px }
 
   &::before { @include translate(50%, 0) }
@@ -77,8 +77,19 @@ $content-attr: "data-tip-content" !default;
   &::before { top: auto; right: -5px; bottom: 50%; left: auto }
   &::after  { top: auto; right: auto; bottom: 50%; left: 100% }
 
-  &::before { border-right-color: black }
+  &::before { border-color: transparent; border-right-color: black }
   &::after  { margin-left: 5px }
+
+  &::before { @include translate(0, 50%) }
+  &::after  { @include translate(0, 50%) }
+}
+
+[#{$attr}~="left"] {
+  &::before { top: auto; right: auto; bottom: 50%; left: -5px }
+  &::after  { top: auto; right: 100%; bottom: 50%; left: auto }
+
+  &::before { border-color: transparent; border-left-color: black }
+  &::after  { margin-right: 5px }
 
   &::before { @include translate(0, 50%) }
   &::after  { @include translate(0, 50%) }
@@ -88,22 +99,11 @@ $content-attr: "data-tip-content" !default;
   &::before { top: auto; right: 50%; bottom: -5px; left: auto }
   &::after  { top: 100%; right: 50%; bottom: auto; left: auto }
 
-  &::before { border-bottom-color: black }
+  &::before { border-color: transparent; border-bottom-color: black }
   &::after  { margin-top: 5px }
 
   &::before { @include translate(50%, 0) }
   &::after  { @include translate(50%, 0) }
-}
-
-[#{$attr}~="left"] {
-  &::before { top: auto; right: auto; bottom: 50%; left: -5px }
-  &::after  { top: auto; right: 100%; bottom: 50%; left: auto }
-
-  &::before { border-left-color: black }
-  &::after  { margin-right: 5px }
-
-  &::before { @include translate(0, 50%) }
-  &::after  { @include translate(0, 50%) }
 }
 
 // anchor
@@ -115,8 +115,8 @@ $content-attr: "data-tip-content" !default;
 
 // flow
 
-[#{$attr}~="flow-up"]    { &::after { bottom: 20% } }
-[#{$attr}~="flow-down"]  { &::after { bottom: 80% } }
+[#{$attr}~="flow-up"]    { &::after { bottom: 80% } }
+[#{$attr}~="flow-down"]  { &::after { bottom: 20% } }
 
 [#{$attr}~="flow-right"] { &::after { @include translate(80%, 0) } }
 [#{$attr}~="flow-left"]  { &::after { @include translate(20%, 0) } }

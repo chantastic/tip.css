@@ -24,7 +24,7 @@
   visibility: visible; }
 
 [data-has-tip]::before {
-  border: 5px solid transparent;
+  border: 5px solid;
   width: 0;
   height: 0;
   content: ""; }
@@ -37,27 +37,28 @@
   color: white;
   white-space: nowrap; }
 
-[data-has-tip]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"])::before {
+[data-has-tip]::before {
   top: auto;
   right: 50%;
   bottom: -5px;
   left: auto; }
-[data-has-tip]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"])::after {
+[data-has-tip]::after {
   top: 100%;
   right: 50%;
   bottom: auto;
   left: auto; }
-[data-has-tip]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"])::before {
+[data-has-tip]::before {
+  border-color: transparent;
   border-bottom-color: black; }
-[data-has-tip]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"])::after {
+[data-has-tip]::after {
   margin-top: 5px; }
-[data-has-tip]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"])::before {
+[data-has-tip]::before {
   -webkit-transform: translate(50%, 0);
   -moz-transform: translate(50%, 0);
   -ms-transform: translate(50%, 0);
   -o-transform: translate(50%, 0);
   transform: translate(50%, 0); }
-[data-has-tip]:not([data-has-tip~="top"]):not([data-has-tip~="right"]):not([data-has-tip~="bottom"]):not([data-has-tip~="left"])::after {
+[data-has-tip]::after {
   -webkit-transform: translate(50%, 0);
   -moz-transform: translate(50%, 0);
   -ms-transform: translate(50%, 0);
@@ -75,6 +76,7 @@
   bottom: 100%;
   left: auto; }
 [data-has-tip~="top"]::before {
+  border-color: transparent;
   border-top-color: black; }
 [data-has-tip~="top"]::after {
   margin-bottom: 5px; }
@@ -102,6 +104,7 @@
   bottom: 50%;
   left: 100%; }
 [data-has-tip~="right"]::before {
+  border-color: transparent;
   border-right-color: black; }
 [data-has-tip~="right"]::after {
   margin-left: 5px; }
@@ -112,6 +115,34 @@
   -o-transform: translate(0, 50%);
   transform: translate(0, 50%); }
 [data-has-tip~="right"]::after {
+  -webkit-transform: translate(0, 50%);
+  -moz-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
+  transform: translate(0, 50%); }
+
+[data-has-tip~="left"]::before {
+  top: auto;
+  right: auto;
+  bottom: 50%;
+  left: -5px; }
+[data-has-tip~="left"]::after {
+  top: auto;
+  right: 100%;
+  bottom: 50%;
+  left: auto; }
+[data-has-tip~="left"]::before {
+  border-color: transparent;
+  border-left-color: black; }
+[data-has-tip~="left"]::after {
+  margin-right: 5px; }
+[data-has-tip~="left"]::before {
+  -webkit-transform: translate(0, 50%);
+  -moz-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
+  transform: translate(0, 50%); }
+[data-has-tip~="left"]::after {
   -webkit-transform: translate(0, 50%);
   -moz-transform: translate(0, 50%);
   -ms-transform: translate(0, 50%);
@@ -129,6 +160,7 @@
   bottom: auto;
   left: auto; }
 [data-has-tip~="bottom"]::before {
+  border-color: transparent;
   border-bottom-color: black; }
 [data-has-tip~="bottom"]::after {
   margin-top: 5px; }
@@ -145,33 +177,6 @@
   -o-transform: translate(50%, 0);
   transform: translate(50%, 0); }
 
-[data-has-tip~="left"]::before {
-  top: auto;
-  right: auto;
-  bottom: 50%;
-  left: -5px; }
-[data-has-tip~="left"]::after {
-  top: auto;
-  right: 100%;
-  bottom: 50%;
-  left: auto; }
-[data-has-tip~="left"]::before {
-  border-left-color: black; }
-[data-has-tip~="left"]::after {
-  margin-right: 5px; }
-[data-has-tip~="left"]::before {
-  -webkit-transform: translate(0, 50%);
-  -moz-transform: translate(0, 50%);
-  -ms-transform: translate(0, 50%);
-  -o-transform: translate(0, 50%);
-  transform: translate(0, 50%); }
-[data-has-tip~="left"]::after {
-  -webkit-transform: translate(0, 50%);
-  -moz-transform: translate(0, 50%);
-  -ms-transform: translate(0, 50%);
-  -o-transform: translate(0, 50%);
-  transform: translate(0, 50%); }
-
 [data-has-tip~="anchor-top"]::before {
   bottom: 80%; }
 
@@ -185,10 +190,10 @@
   right: 80%; }
 
 [data-has-tip~="flow-up"]::after {
-  bottom: 20%; }
+  bottom: 80%; }
 
 [data-has-tip~="flow-down"]::after {
-  bottom: 80%; }
+  bottom: 20%; }
 
 [data-has-tip~="flow-right"]::after {
   -webkit-transform: translate(80%, 0);
