@@ -5,7 +5,11 @@ title: Tip.css
 
 <section>
   <p style="text-align: center; font-size: 16px">
-    <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
+    A teeny, no-js tooltip. Easy to control. Simple to style.
+  </p>
+
+  <p style="text-align: center; font-size: 16px">
+    <span data-tip-content="this is a tip" style="color: #39c" data-has-tip>Hover here</span>
   </p>
 
   <div style="margin-top: 50px; text-align: center">
@@ -13,4 +17,78 @@ title: Tip.css
     <span data-tip-content="this is a tip" data-has-tip>Hover here</span>
     {% endhighlight %}
   </div>
+</section>
+
+<section style="padding: 10px">
+  <h2>Position</h2>
+  <table class="use-table">
+    <tbody>
+      <tr>
+        <td> data-has-tip="top" </td>
+        <td> <span data-tip-content="top" data-has-tip="top">Hover to hide</span> </td>
+      </tr>
+
+      <tr>
+        <td> data-has-tip="right" </td>
+        <td> <span data-tip-content="right" data-has-tip="right">Hover to hide</span> </td>
+      </tr>
+
+      <tr>
+        <td> data-has-tip="bottom" </td>
+        <td> <span data-tip-content="bottom" data-has-tip="bottom">Hover to hide</span> </td>
+      </tr>
+
+      <tr>
+        <td> data-has-tip="left" </td>
+        <td> <span data-tip-content="left" data-has-tip="left">Hover to hide</span> </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section style="padding: 10px">
+  <h2>Flow <span class="mute">&middot; Horizontal</span></h2>
+  <table class="use-table">
+    <tbody>
+      <tr>
+        <td> data-has-tip="flow-right" </td>
+        <td> <span data-tip-content="flow-right" data-has-tip="flow-right">Hover to hide</span> </td>
+      </tr>
+
+      <tr>
+        <td> data-has-tip="flow-left" </td>
+        <td> <span data-tip-content="flow-left" data-has-tip="flow-left">Hover to hide</span> </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section style="padding: 10px">
+  <h2>Anchor <span class="mute">&middot; Horizontal</span></h2>
+  <table class="use-table">
+    <tbody>
+      <tr>
+        <td> data-has-tip="anchor-right" </td>
+        <td> <span data-tip-content="anchor-right" data-has-tip="top anchor-right">Hover to hide</span> </td>
+      </tr>
+
+      <tr>
+        <td> data-has-tip="anchor-left" </td>
+        <td> <span data-tip-content="flow-left" data-has-tip="anchor-left">Hover to hide</span> </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section style="padding: 10px">
+  <h2>Multiline</h2>
+  <table class="use-table">
+    <tbody>
+      <tr>
+        <td> data-has-tip="multiline top" </td>
+        <td> <span data-tip-content="multiline. this is a really long tip that
+            wraps at 200px" data-has-tip="multiline top">Hover to hide</span> </td>
+      </tr>
+    </tbody>
+  </table>
 </section>
