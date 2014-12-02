@@ -22,18 +22,14 @@ $content-attr: "data-tip-content" !default;
   cursor:   default;
 }
 
-[#{$attr}]::before,
-[#{$attr}]::after {
+[#{$attr}]::before, [#{$attr}]::after {
   position:       absolute;
   visibility:     hidden;
   z-index:        100000;
   pointer-events: none;
 }
 
-[#{$attr}]:hover::before,
-[#{$attr}]:hover::after {
-  visibility: visible;
-}
+[#{$attr}]:hover::before, [#{$attr}]:hover::after { visibility: visible }
 
 [#{$attr}]::before {
   border:  5px solid;
@@ -54,74 +50,149 @@ $content-attr: "data-tip-content" !default;
 // position
 
 [#{$attr}] {
-  &::before { top: auto; right: 50%; bottom: -5px; left: auto }
-  &::after  { top: 100%; right: 50%; bottom: auto; left: auto }
+  &::before, &::after { @include translate(-50%, 0) }
 
-  &::before { border-color: transparent; border-bottom-color: black }
-  &::after  { margin-top: 5px }
+  &::before {
+    bottom: -5px;
+    left: 50%;
 
-  &::before { @include translate(50%, 0) }
-  &::after  { @include translate(50%, 0) }
+    border-color: transparent;
+    border-bottom-color: black;
+  }
+
+  &::after {
+    top: 100%;
+    left: 50%;
+
+    margin-top: 5px;
+  }
 }
 
 [#{$attr}~="top"] {
-  &::before { top: -5px; right: 50%; bottom: auto; left: auto }
-  &::after  { top: auto; right: 50%; bottom: 100%; left: auto }
+  &::before, &::after { @include translate(50%, 0) }
 
-  &::before { border-color: transparent; border-top-color: black }
-  &::after  { margin-bottom: 5px }
+  &::before {
+    top: -5px;
+    right: 50%;
+    bottom: auto;
+    left: auto;
 
-  &::before { @include translate(50%, 0) }
-  &::after  { @include translate(50%, 0) }
+    border-color: transparent;
+    border-top-color: black;
+  }
+
+  &::after {
+    right: 50%;
+    bottom: 100%;
+    top: auto;
+    left: auto;
+
+    margin-bottom: 5px;
+  }
 }
 
 [#{$attr}~="right"] {
-  &::before { top: auto; right: -5px; bottom: 50%; left: auto }
-  &::after  { top: auto; right: auto; bottom: 50%; left: 100% }
+  &::before, &::after { @include translate(0, 50%) }
 
-  &::before { border-color: transparent; border-right-color: black }
-  &::after  { margin-left: 5px }
+  &::before {
+    top: auto;
+    right: -5px;
+    bottom: 50%;
+    left: auto;
 
-  &::before { @include translate(0, 50%) }
-  &::after  { @include translate(0, 50%) }
-}
+    border-color: transparent;
+    border-right-color: black;
+  }
 
-[#{$attr}~="left"] {
-  &::before { top: auto; right: auto; bottom: 50%; left: -5px }
-  &::after  { top: auto; right: 100%; bottom: 50%; left: auto }
+  &::after {
+    top: auto;
+    right: auto;
+    bottom: 50%;
+    left: 100%;
 
-  &::before { border-color: transparent; border-left-color: black }
-  &::after  { margin-right: 5px }
-
-  &::before { @include translate(0, 50%) }
-  &::after  { @include translate(0, 50%) }
+    margin-left: 5px;
+  }
 }
 
 [#{$attr}~="bottom"] {
-  &::before { top: auto; right: 50%; bottom: -5px; left: auto }
-  &::after  { top: 100%; right: 50%; bottom: auto; left: auto }
+  &::before, &::after { @include translate(-50%, 0) }
 
-  &::before { border-color: transparent; border-bottom-color: black }
-  &::after  { margin-top: 5px }
+  &::before {
+    top: auto;
+    right: auto;
+    bottom: -5px;
+    left: 50%;
 
-  &::before { @include translate(50%, 0) }
-  &::after  { @include translate(50%, 0) }
+    border-color: transparent;
+    border-bottom-color: black;
+  }
+
+  &::after {
+    top: 100%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+
+    margin-top: 5px;
+  }
 }
 
-// anchor
+[#{$attr}~="left"] {
+  &::before, &::after { @include translate(0, 50%) }
 
-[#{$attr}~="anchor-top"]    { &::before { bottom: 80% } }
-[#{$attr}~="anchor-right"]  { &::before { right:  20% } }
-[#{$attr}~="anchor-bottom"] { &::before { bottom: 20% } }
-[#{$attr}~="anchor-left"]   { &::before { right:  80% } }
+  &::before {
+    top: auto;
+    right: auto;
+    bottom: 50%;
+    left: -5px;
 
-// flow
+    border-color: transparent;
+    border-left-color: black
+  }
 
-[#{$attr}~="flow-up"]    { &::after { bottom: 80% } }
-[#{$attr}~="flow-down"]  { &::after { bottom: 20% } }
+  &::after  {
+    top: auto;
+    right: 100%;
+    bottom: 50%;
+    left: auto;
 
-[#{$attr}~="flow-right"] { &::after { @include translate(80%, 0) } }
-[#{$attr}~="flow-left"]  { &::after { @include translate(20%, 0) } }
+    margin-right: 5px
+  }
+}
+
+// anchor - default/bottom
+
+[#{$attr}][#{$attr}~="anchor-right"],
+[#{$attr}~="bottom"][#{$attr}~="anchor-right"] {
+  &::before, &::after { @include translate(50%, 0) }
+
+  &::before { top: auto; right: 20%; bottom: -5px; left: auto }
+  &::after  { top: 100%; right: 20%; bottom: auto; left: auto }
+}
+
+[#{$attr}][#{$attr}~="anchor-left"],
+[#{$attr}~="bottom"][#{$attr}~="anchor-left"]  {
+  &::before, &::after { @include translate(50%, 0) }
+
+  &::before { top: auto; right: 80%; bottom: -5px; left: auto }
+  &::after  { top: 100%; right: 80%; bottom: auto; left: auto }
+}
+
+// anchor - top
+
+[#{$attr}~="top"][#{$attr}~="anchor-right"] {
+  &::before, &::after { @include translate(50%, 0) }
+
+  &::before { top: -5px; right: 20%; bottom: auto; left: auto }
+  &::after  { top: auto; right: 20%; bottom: 100%; left: auto }
+}
+
+[#{$attr}~="top"][#{$attr}~="anchor-left"]  {
+  &::before, &::after { @include translate(50%, 0) }
+
+  &::before { top: -5px; right: 80%; bottom: auto; left: auto }
+  &::after  { top: auto; right: 80%; bottom: 100%; left: auto }
+}
 
 // multiline
 
