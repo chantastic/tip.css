@@ -1,0 +1,48 @@
+@import "_mixins/translate";
+
+.hint-theme {
+  [data-has-tip]::before,
+  [data-has-tip]::after {
+    font: normal normal 12px/12px Helvetica, arial, sans-serif;
+    transition: all .3s ease;
+    opacity: 0;
+  }
+
+  [data-has-tip]::after { box-shadow: 4px 4px 8px rgba(0,0,0,.3) }
+
+  [data-has-tip]:hover::before,
+  [data-has-tip]:hover::after {
+    opacity: 1;
+  }
+
+  [data-has-tip],
+  [data-has-tip][data-has-tip~="bottom"] {
+    &::before { @include translate(-50%, -50%) }
+    &::after  { @include translate(-50%, -25%) }
+
+    &:hover::before, &:hover::after { @include translate(-50%, 0) }
+  }
+
+  [data-has-tip][data-has-tip~="top"] {
+    &::before { @include translate(50%, 50%) }
+    &::after  { @include translate(50%, 25%) }
+
+    &:hover::before, &:hover::after { @include translate(50%, 0) }
+  }
+
+  [data-has-tip][data-has-tip~="right"] {
+    &::before { @include translate(-80%, 50%) }
+    &::after  { @include translate(-25%, 50%) }
+
+    &:hover::before, &:hover::after { @include translate(0, 50%) }
+  }
+
+  [data-has-tip][data-has-tip~="left"] {
+    &::before { @include translate(80%, 50%) }
+    &::after  { @include translate(25%, 50%) }
+
+    &:hover::before, &:hover::after { @include translate(0, 50%) }
+  }
+
+  // FIX: anchoring. Its animating position
+}
