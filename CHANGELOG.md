@@ -1,3 +1,4 @@
+* [feat]  add foundation theme
 * [feat]  add bootstrap theme
 * [feat]  add github theme
 
