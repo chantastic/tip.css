@@ -1,3 +1,4 @@
+* [feat]  add bootstrap theme
 * [feat]  add github theme
 
 ### 0.3.0 : heavy-flow [2014.12.03]

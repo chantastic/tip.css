@@ -1,0 +1,10 @@
+.bootstrap-theme [data-has-tip]::after {
+  font: normal normal 12px/1.4 Helvetica, arial, sans-serif;
+  padding: 3px 8px;
+  border-radius: 4px; }
+.bootstrap-theme [data-has-tip]::before, .bootstrap-theme [data-has-tip]::after {
+  transition: all 0.2s ease-in;
+  opacity: 0; }
+.bootstrap-theme [data-has-tip]:hover::before, .bootstrap-theme [data-has-tip]:hover::after {
+  transition: all 0.2s ease-out;
+  opacity: 1; }

@@ -1,0 +1,22 @@
+.bootstrap-theme {
+  [data-has-tip]::after {
+    font: normal normal 12px/1.4 Helvetica, arial, sans-serif;
+    padding: 3px 8px;
+    border-radius: 4px;
+
+    // FIX: webkit font rendering during transition
+    // http://css-tricks.com/forums/topic/transforms-cause-font-smoothing-weirdness-in-webkit/
+  }
+
+  [data-has-tip]::before,
+  [data-has-tip]::after {
+    transition: all .2s ease-in;
+    opacity: 0;
+  }
+
+  [data-has-tip]:hover::before,
+  [data-has-tip]:hover::after {
+    transition: all .2s ease-out;
+    opacity: 1;
+  }
+}
