@@ -1,0 +1,15 @@
+$background-color: rgba(0,0,0,.8);
+
+.github-theme {
+  [data-has-tip]::after {
+    font: normal normal 11px/1.5 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: $background-color;
+    border-radius: 3px;
+  }
+
+  [data-has-tip]::before           { border-color: transparent; border-bottom-color: $background-color }
+  [data-has-tip~="top"]::before    { border-color: transparent; border-top-color:    $background-color }
+  [data-has-tip~="bottom"]::before { border-color: transparent; border-bottom-color: $background-color }
+  [data-has-tip~="right"]::before  { border-color: transparent; border-right-color:  $background-color }
+  [data-has-tip~="left"]::before   { border-color: transparent; border-left-color:   $background-color }
+}

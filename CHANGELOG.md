@@ -1,3 +1,5 @@
+* [feat]  add github theme
+
 ### 0.3.0 : heavy-flow [2014.12.03]
 
 * [chore]  remove 'build:release' task in favor of default 'styles:min'
