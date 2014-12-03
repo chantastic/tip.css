@@ -1,3 +1,4 @@
+* [chore]  remove 'build:release' task in favor of default 'styles:min'
 * [remove] flow api to stabilize core
 
 ### 0.2.0 : disoriented-specificity [2014.10.26]
