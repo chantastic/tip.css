@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/styles.css">
     <link rel="stylesheet" href="//chantastic.s3.amazonaws.com/tip.0.3.0.min.css">
+    <link rel="stylesheet" href="//chantastic.s3.amazonaws.com/bootstrap-tip-theme.min.css">
+    <link rel="stylesheet" href="//chantastic.s3.amazonaws.com/foundation-tip-theme.min.css">
+    <link rel="stylesheet" href="//chantastic.s3.amazonaws.com/github-tip-theme.min.css">
     <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -14,15 +17,15 @@
     <![endif]-->
     <style>
       [data-has-tip] { border-bottom: 1px dotted }
-      .use-table [data-has-tip]::before       { visibility: visible }
-      .use-table [data-has-tip]::after        { visibility: visible }
-      .use-table [data-has-tip]:hover::before { visibility: hidden }
-      .use-table [data-has-tip]:hover::after  { visibility: hidden }
       .use-table tr { height: 100px }
+      .use-table [data-has-tip]::before       { visibility: visible; opacity: 1 }
+      .use-table [data-has-tip]::after        { visibility: visible; opacity: 1 }
+      .use-table [data-has-tip]:hover::before { visibility: hidden;  opacity: 0 }
+      .use-table [data-has-tip]:hover::after  { visibility: hidden;  opacity: 0 }
     </style>
   </head>
 
-  <body>
+  <body class="">
 
     <main class="wrapper">
 
@@ -56,6 +59,7 @@
     </main>
 
     <script src="{{site.baseurl}}/javascripts/scale.fix.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

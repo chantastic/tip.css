@@ -10,6 +10,13 @@ title: Tip.css
 
   <p style="text-align: center; font-size: 16px">
     <span data-tip-content="this is a tip" style="color: #39c" data-has-tip>Hover here</span>
+    &nbsp;&nbsp;
+    <select name="theme" id="themeSelect">
+      <option value="no-theme" selected>default theme</option>
+      <option value="bootstrap-theme">bootstrap theme</option>
+      <option value="foundation-theme">foundation theme</option>
+      <option value="github-theme">github theme</option>
+    </select>
   </p>
 
   <div style="margin-top: 50px; text-align: center">
@@ -75,3 +82,15 @@ title: Tip.css
     </tbody>
   </table>
 </section>
+
+<script>
+  var themeSelect = document.getElementById('themeSelect');
+
+  var changeTheme = function (e) {
+    var body = document.querySelector('body');
+    body.className = '';
+    body.classList.add(e.target.value);
+  }
+
+  themeSelect.addEventListener('change', changeTheme);
+</script>
